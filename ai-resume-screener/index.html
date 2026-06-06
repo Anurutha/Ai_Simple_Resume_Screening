@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI Resume Screening System — NLP-powered resume analysis and job matching platform. Upload your resume and instantly get a match score." />
+  <meta name="keywords" content="AI resume screening, resume parser, job matching, NLP, skills extraction, candidate ranking" />
+  <meta property="og:title" content="AI Resume Screening System" />
+  <meta property="og:description" content="Instantly analyze resumes against job descriptions using AI." />
+  <meta property="og:type" content="website" />
+  <title>AI Resume Screener — Intelligent Candidate Matching</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-icon">⬡</span>
+      <span>ResumeAI</span>
+    </a>
+    <div class="nav-links">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#screener">Try It</a>
+      <a href="#features">Features</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="#screener" class="btn-nav">Try Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#screener">Try It</a>
+    <a href="#features">Features</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      NLP-Powered Intelligence
+    </div>
+    <h1 class="hero-title">
+      Screen Resumes<br/>
+      <span class="gradient-text">10x Faster</span><br/>
+      with AI
+    </h1>
+    <p class="hero-sub">
+      Upload any resume. Paste a job description. Our AI extracts skills, computes semantic similarity, and ranks candidates instantly — no manual review needed.
+    </p>
+    <div class="hero-ctas">
+      <a href="#screener" class="btn-primary">
+        Analyze Resume
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <strong>98%</strong>
+        <span>Accuracy</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <strong>&lt;2s</strong>
+        <span>Analysis Time</span>
+      </div>
+      <div class="stat-div"></div>
+      <div class="stat">
+        <strong>50+</strong>
+        <span>Skills Tracked</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Process</span>
+      <h2>How It Works</h2>
+      <p>Three intelligent steps from upload to insight</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card" data-step="01">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <h3>Upload Resume</h3>
+        <p>Drop a PDF resume. Our parser extracts all text content with high fidelity using PyPDF2.</p>
+      </div>
+      <div class="step-connector">
+        <svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 12 H50 M44 6 L50 12 L44 18" stroke-dasharray="4 3"/></svg>
+      </div>
+      <div class="step-card" data-step="02">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <h3>Extract Skills</h3>
+        <p>NLP scans for 50+ technical and soft skills — from Python to Machine Learning to leadership.</p>
+      </div>
+      <div class="step-connector">
+        <svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 12 H50 M44 6 L50 12 L44 18" stroke-dasharray="4 3"/></svg>
+      </div>
+      <div class="step-card" data-step="03">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Match & Score</h3>
+        <p>TF-IDF vectorization and cosine similarity produce a precise match score against your JD.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN SCREENER -->
+<section class="section screener-section" id="screener">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Live Tool</span>
+      <h2>AI Resume Screener</h2>
+      <p>Paste a job description and upload a resume to get an instant match analysis</p>
+    </div>
+
+    <div class="screener-grid">
+      <!-- LEFT: Inputs -->
+      <div class="input-panel">
+        <div class="input-block">
+          <label class="input-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            Job Description
+          </label>
+          <textarea id="jobInput" class="job-textarea" placeholder="Paste the full job description here...&#10;&#10;Example: We are looking for a Python developer with experience in machine learning, data analysis, and TensorFlow..."></textarea>
+          <div class="char-count"><span id="jdCount">0</span> characters</div>
+        </div>
+
+        <div class="input-block">
+          <label class="input-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Upload Resume (PDF)
+          </label>
+          <div class="upload-zone" id="uploadZone">
+            <input type="file" id="fileInput" accept=".pdf" hidden />
+            <div class="upload-idle" id="uploadIdle">
+              <div class="upload-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              </div>
+              <p><strong>Drag & drop</strong> or <span class="upload-link">browse file</span></p>
+              <small>PDF files only · Max 10MB</small>
+            </div>
+            <div class="upload-ready" id="uploadReady" style="display:none">
+              <div class="file-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span id="fileName">resume.pdf</span>
+                <button class="remove-file" id="removeFile">✕</button>
+              </div>
+              <p class="ready-msg">✓ Resume ready for analysis</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-analyze" id="analyzeBtn" disabled>
+          <span class="btn-text">Analyze Resume</span>
+          <div class="btn-loader" style="display:none">
+            <div class="spinner"></div>
+            <span>Analyzing...</span>
+          </div>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- RIGHT: Results -->
+      <div class="result-panel" id="resultPanel">
+        <div class="result-empty" id="resultEmpty">
+          <div class="empty-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="32" cy="32" r="28" stroke-dasharray="6 4"/>
+              <path d="M20 32 L28 40 L44 24"/>
+            </svg>
+          </div>
+          <h3>Results will appear here</h3>
+          <p>Fill in both fields and click Analyze Resume</p>
+        </div>
+
+        <div class="result-content" id="resultContent" style="display:none">
+          <!-- Score Ring -->
+          <div class="score-card">
+            <div class="score-ring-wrap">
+              <svg class="score-ring" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52" fill="none" stroke-width="8"/>
+                <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="52" fill="none" stroke-width="8" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" transform="rotate(-90 60 60)"/>
+              </svg>
+              <div class="score-center">
+                <span class="score-num" id="scoreNum">0</span>
+                <span class="score-pct">%</span>
+              </div>
+            </div>
+            <div class="score-meta">
+              <div class="score-label" id="scoreLabel">Match Score</div>
+              <div class="score-verdict" id="scoreVerdict"></div>
+              <div class="score-bar-row">
+                <span class="bar-label">Semantic Similarity</span>
+                <div class="thin-bar"><div class="thin-fill" id="thinFill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Tags -->
+          <div class="skills-card">
+            <div class="card-header">
+              <h3>Extracted Skills</h3>
+              <span class="skill-badge" id="skillCount">0 found</span>
+            </div>
+            <div class="skills-cloud" id="skillsCloud"></div>
+          </div>
+
+          <!-- Breakdown -->
+          <div class="breakdown-card" id="breakdownCard">
+            <div class="card-header">
+              <h3>Analysis Breakdown</h3>
+            </div>
+            <div class="breakdown-rows" id="breakdownRows"></div>
+          </div>
+
+          <!-- Recommendation -->
+          <div class="rec-card" id="recCard">
+            <div class="rec-icon" id="recIcon"></div>
+            <div class="rec-text">
+              <strong id="recTitle"></strong>
+              <span id="recBody"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Capabilities</span>
+      <h2>Built for Precision</h2>
+      <p>Every component engineered for accurate candidate evaluation</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feat-icon teal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>TF-IDF Vectorization</h3>
+        <p>Converts text into mathematical vectors to measure semantic closeness between resumes and job descriptions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon purple">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Cosine Similarity</h3>
+        <p>Industry-standard metric for text comparison — measures the angle between document vectors for robust scoring.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon amber">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Skills Intelligence</h3>
+        <p>Detects 50+ technical and soft skills from resume text — from programming languages to data science tools.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon coral">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+        </div>
+        <h3>PDF Text Extraction</h3>
+        <p>Parses PDF resumes page by page using PyPDF2, preserving content structure for accurate NLP processing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        </div>
+        <h3>Candidate Ranking</h3>
+        <p>Score thresholds automatically classify candidates as Excellent, Average, or Low match — HR-ready output.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Real-Time Analysis</h3>
+        <p>Instant feedback under 2 seconds. No server round-trips for scoring — all computed client-side after upload.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="section tech-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Stack</span>
+      <h2>Technology Behind It</h2>
+    </div>
+    <div class="tech-strip">
+      <div class="tech-pill">Python 3.13</div>
+      <div class="tech-pill">Streamlit</div>
+      <div class="tech-pill">scikit-learn</div>
+      <div class="tech-pill">TF-IDF</div>
+      <div class="tech-pill">PyPDF2</div>
+      <div class="tech-pill">NLP</div>
+      <div class="tech-pill">Cosine Similarity</div>
+      <div class="tech-pill">Pandas · NumPy</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">⬡</span>
+      <span>ResumeAI</span>
+    </div>
+    <p class="footer-copy">Built with NLP + Machine Learning · Open Source</p>
+    <div class="footer-links">
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      <a href="#screener">Try It</a>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- PDF.JS for client-side parsing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
